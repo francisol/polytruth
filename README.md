@@ -81,4 +81,4 @@ test2 : ~a -> b
 |Disjunction|Or|`∨`, `\/`|Logical OR|
 |Negation|Not|`~`, `¬`|~a|Logical NOT|
 |Implication|Implies|`->`,`→`|a -> b|Material implication|
-|Equivalence|Equiv|`<->`,`↔`|a == b|Logical equivalence|
+|Equivalence|Equiv|`<->`,`↔`|a <-> b|Logical equivalence|
