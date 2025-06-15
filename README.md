@@ -26,8 +26,7 @@ pip install polytruth
 ```python
 
 import numpy as np
-from polytruth import LogicSystem, MultiValuedOperators
-from polytruth.operators import And, Not
+from polytruth import LogicSystem, MultiValuedOperators,And, Not
 
 # Initialize logic system with poly-valued operators
 logic_system = LogicSystem(MultiValuedOperators())
@@ -58,10 +57,13 @@ print(logic_system.compute("rule1"))
 # View all variables
 print("\nSystem variables:")
 print(logic_system.variables)
+## View all rules
+print("\nSystem rules:")
+print(logic_system.rules)
 ```
 ### File Parsing
 
-```
+```python
 from polytruth.parser import parse_file
 from polytruth import LogicSystem, MultiValuedOperators
 logic_system = LogicSystem(MultiValuedOperators())
@@ -78,7 +80,7 @@ test2 : ~a -> b
 |Operator|Class (in code)|Symbol (in file)|Example|Description|
 |--|--|--|--|--|
 |Conjunction|And|`&`, `∧`,`/\` |a & b|Logical AND|
-|Disjunction|Or|`∨`, `\/`|Logical OR|
+|Disjunction|Or|`∨`, `\/`| a\|b |Logical OR|
 |Negation|Not|`~`, `¬`|~a|Logical NOT|
 |Implication|Implies|`->`,`→`|a -> b|Material implication|
 |Equivalence|Equiv|`<->`,`↔`|a <-> b|Logical equivalence|
