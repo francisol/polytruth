@@ -1,4 +1,8 @@
 # Polytruth - Multi-valued Logic Truth Value Computation Framework
+![PyPI - License](https://img.shields.io/pypi/l/polytruth)
+![PyPI - Wheel](https://img.shields.io/pypi/wheel/polytruth)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/polytruth)
+![PyPI - Version](https://img.shields.io/pypi/v/polytruth)
 
 `Polytruth` is a Python package for modeling and computing truth values in multi-valued logic systems. It supports complex logical expressions, variable management, rule-based reasoning, and external file parsing, making it ideal for  multi-valued logic applications. 
 
