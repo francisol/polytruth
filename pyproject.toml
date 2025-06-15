@@ -1,6 +1,5 @@
 [project]
 name = "polytruth"
-classifiers = ["Private :: Do Not Upload"]
 version = "0.1.0"
 description = " Multi-valued Logic Truth Value Computation Framework"
 readme = "README.md"
