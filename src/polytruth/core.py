@@ -1,4 +1,4 @@
-from .operator import Operators
+from .operators import Operators
 from abc import ABC, abstractmethod
 from .types import *
 from typing import Optional, Union,overload
@@ -52,7 +52,7 @@ class Or(Expr):
         self.__a__=a
         self.__b__=b
     def compute(self,operators: Operators):
-        return operators.lor(self.__a__(operators),self.__b__(operators))
+        return operators.logic_or(self.__a__(operators),self.__b__(operators))
 
     def __repr__(self):
         return self.__str__()
@@ -64,7 +64,7 @@ class And(Expr):
         self.__a__=a
         self.__b__=b
     def compute(self,operators: Operators):
-        return operators.land(self.__a__(operators),self.__b__(operators))
+        return operators.logic_and(self.__a__(operators),self.__b__(operators))
 
     def __repr__(self):
         return self.__str__()
@@ -75,7 +75,7 @@ class Not(Expr):
     def __init__(self,a:Expr):
         self.__a__=a
     def compute(self,operators: Operators):
-        return operators.lnot(self.__a__(operators))
+        return operators.logic_not(self.__a__(operators))
 
     def __repr__(self):
         return self.__str__()
@@ -87,7 +87,7 @@ class Implies(Expr):
         self.__a__=a
         self.__b__=b
     def compute(self,operators: Operators):
-        return operators.implies(self.__a__(operators),self.__b__(operators))
+        return operators.logic_implies(self.__a__(operators),self.__b__(operators))
 
     def __repr__(self):
         return self.__str__()
@@ -99,7 +99,7 @@ class Equiv(Expr):
         self.__a__=a
         self.__b__=b
     def compute(self,operators: Operators):
-        return operators.equiv(self.__a__(operators),self.__b__(operators))
+        return operators.logic_equiv(self.__a__(operators),self.__b__(operators))
 
     def __repr__(self):
         return self.__str__()

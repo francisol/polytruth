@@ -3,7 +3,7 @@ from typing import Optional, Union,overload
 from types import MappingProxyType
 
 from .core import *
-from .operator import *
+from .operators import *
 from .types import *
 class LogicSystem:
     """A logic system that can be used to reason."""
