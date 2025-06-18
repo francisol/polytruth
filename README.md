@@ -36,8 +36,8 @@ from polytruth import LogicSystem, MultiValuedOperators,And, Not
 logic_system = LogicSystem(MultiValuedOperators())
 
 # Create variables with multi-dimensional truth values
-a = logic_system.new_variable("a", np.array([0.3, 0.7]))  # Ternary logic example
-b = logic_system.new_variable("b", np.array([0.5, 0.5]))  # Probability distribution
+a = logic_system.new_variable("a", np.array([0.3, 0.7]))  
+b = logic_system.new_variable("b", np.array([0.5, 0.5]))  
 
 # Add logical rules
 rule1 = And(And(a, b), Not(b))
@@ -46,8 +46,8 @@ logic_system.add_rule("rule2", ~a & (b | a))
 
 # Set variable values
 logic_system.set_variable_values({
-    "is(a,c)": np.array([0.5, 0.9]),  # Custom predicate
-    "b": 0.8  # Scalar truth value
+    "b": np.array([0.5, 0.9]),  
+    "b": 0.8  
 })
 
 # Compute all rules
