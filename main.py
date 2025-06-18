@@ -8,7 +8,7 @@ from polytruth.parser import parse_file
 
 def exmaple_for_multvalued():
     import numpy as np
-    from polytruth import LogicSystem, MultiValuedOperators,And, Not
+    from polytruth import LogicSystem,And, Not
 
     # Initialize logic system with poly-valued operators
     logic_system = LogicSystem(MultiValuedOperators())
