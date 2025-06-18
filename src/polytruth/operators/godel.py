@@ -19,13 +19,7 @@ class GodelOperators(Operators):
         """Gödel t-conorm"""
         return lambda a,b:  np.maximum(a, b)
     
-    @staticmethod
-    def negation(**kwargs):
-        """Gödel """
-        # 在 Gödel 逻辑中，否定定义为：
-        # ¬a = 1 if a=0 else 0
-        # 但更通用的实现是使用标准否定
-        return lambda a,b:  1 - a
+
     
     @staticmethod
     def implication(**kwargs):
